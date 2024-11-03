@@ -1,0 +1,8 @@
+# Ignore tmux plugins, they are managed by tpm ...
+# ... but you have to first install tpm like so:
+#     git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+plugins/
+
+# Ignore local snippets
+.snippets/
+
