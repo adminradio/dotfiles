@@ -78,6 +78,7 @@ plugins=(
   git
   tldr
   rsync
+  direnv
   docker
   gitignore
   docker-compose
