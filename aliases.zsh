@@ -10,9 +10,12 @@ alias dive="docker run -ti --rm -v /var/run/docker.sock:/var/run/docker.sock wag
 
 # Shorthands
 alias t='tmux'
+alias ta="tmux attach"
+
 alias v='nvim'
 alias e='nvim'
 alias vim='nvim'
+
 alias ndot="cd ~/.dotfiles && nvim . && cd ${OLDPWD}"
 
 # TODO:  Make this a custom function that takes a length as an argument.
