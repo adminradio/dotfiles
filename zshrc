@@ -1,25 +1,26 @@
 # vim:ft=zsh:
 
+# Add users local bin to PATH
 export PATH=$HOME/bin:$PATH
 
 # Setup Oh My ZSH Path
 export ZSH="${XDG_CONFIG_HOME:-$HOME/.config}/oh-my-zsh"
 
-# Setup XDG compliant Cache Directory
+# Setup XDG compliant Cache Directory for ZSH
 export ZSH_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
 if [[ ! -d $ZSH_CACHE ]]
 then
   mkdir -p $ZSH_CACHE
 fi
 
-# Setup XDG compliant Data Directory
+# Setup XDG compliant Data Directory for ZSH
 export ZSH_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/zsh"
 if [[ ! -d $ZSH_DATA ]]
 then
   mkdir -p $ZSH_DATA
 fi
 
-# Setup XDG compliant State Directory
+# Setup XDG compliant State Directory for ZSH
 export ZSH_STATE="${XDG_DATA_STATE:-$HOME/.local/state}/zsh"
 if [[ ! -d $ZSH_STATE ]]
 then
@@ -85,6 +86,7 @@ plugins=(
   colored-man-pages
 )
 
+# INFO: Source Oh My ZSH (keep it late)
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
@@ -117,9 +119,9 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
-# Fuzzy search your history. :)
+# Fuzzy search the history. :)
 source <(fzf --zsh)
 
-# `brew` added `unbound` into /usr/local/sbin
+# `homebrew` added `unbound` into /usr/local/sbin
 export PATH="/usr/local/sbin:$PATH"
 
